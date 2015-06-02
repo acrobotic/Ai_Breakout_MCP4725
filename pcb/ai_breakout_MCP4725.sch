@@ -269,10 +269,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <connect gate="U1" pin="VSS" pad="2"/>
 </connects>
 <technologies>
-<technology name="">
-<attribute name="PROD_ID" value="IC-08886" constant="no"/>
-<attribute name="VALUE" value="MCP4725" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -340,8 +337,20 @@ This library includes USB, pin headers and sockets in different configurations (
 <wire x1="-0.8" y1="1" x2="0.8" y2="1" width="0.2032" layer="21"/>
 <smd name="1" x="-0.45" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
 <smd name="2" x="0.45" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<text x="-1.27" y="1.27" size="1.27" layer="51" font="vector" ratio="15">&gt;NAME</text>
-<text x="-1.27" y="1.27" size="1.27" layer="51" font="vector" ratio="15">&gt;NAME</text>
+<text x="-1.27" y="1.27" size="1.27" layer="25" font="vector" ratio="10">&gt;NAME</text>
+</package>
+<package name="1X03-ST">
+<wire x1="-5.25" y1="3.4" x2="-5.25" y2="-2.24" width="0.2032" layer="21"/>
+<wire x1="-5.25" y1="-2.24" x2="-5.25" y2="-3.6" width="0.2032" layer="21"/>
+<wire x1="-5.25" y1="-3.6" x2="5.25" y2="-3.6" width="0.2032" layer="21"/>
+<wire x1="5.25" y1="-3.6" x2="5.25" y2="-2.24" width="0.2032" layer="21"/>
+<wire x1="5.25" y1="-2.24" x2="5.25" y2="3.4" width="0.2032" layer="21"/>
+<wire x1="5.25" y1="3.4" x2="-5.25" y2="3.4" width="0.2032" layer="21"/>
+<wire x1="-5.25" y1="-2.24" x2="5.25" y2="-2.24" width="0.2032" layer="21"/>
+<pad name="2" x="0" y="0" drill="1.016" diameter="2.032"/>
+<pad name="1" x="-3.5" y="0" drill="1.016" diameter="2.032" first="yes"/>
+<text x="-5.56" y="3.81" size="1.27" layer="25" font="vector" ratio="10">&gt;NAME</text>
+<pad name="3" x="3.5" y="0" drill="1.016" diameter="2.032"/>
 </package>
 </packages>
 <symbols>
@@ -360,7 +369,7 @@ This library includes USB, pin headers and sockets in different configurations (
 <wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
 <wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
 <wire x1="-2.54" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
-<text x="1.778" y="0.127" size="1.524" layer="95" font="vector" ratio="10">&gt;NAME</text>
+<text x="1.778" y="0.254" size="1.524" layer="95" font="vector" ratio="10">&gt;NAME</text>
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 </symbol>
@@ -392,6 +401,16 @@ This library includes USB, pin headers and sockets in different configurations (
 </technologies>
 </device>
 <device name="ST950" package="1X03-ST950">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="ST" package="1X03-ST">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -10093,7 +10112,7 @@ This library includes schematic frames, logos, and other non-electrical/-mechani
 <part name="R2" library="Ai_Passives" deviceset="RES" device="0603" value="10k"/>
 <part name="R3" library="Ai_Passives" deviceset="RES" device="0603" value="10k"/>
 <part name="FRAME1" library="frames" deviceset="A3L-LOC" device=""/>
-<part name="U1" library="Ai_IC" deviceset="MCP4725" device="SOT-23" value="MCP4725"/>
+<part name="U1" library="Ai_IC" deviceset="MCP4725" device="SOT-23" value="MCP4725SOT-23"/>
 <part name="J1" library="Ai_Connectors" deviceset="1X03" device=""/>
 <part name="J2" library="Ai_Connectors" deviceset="1X03" device="NOFIRST" value="1X03NOFIRST"/>
 <part name="GND1" library="Ai_Power" deviceset="GND" device=""/>
